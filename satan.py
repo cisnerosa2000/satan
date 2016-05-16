@@ -1,4 +1,7 @@
 import os
-for roots, dirs, files in os.walk("../"):
+def is_ascii(s):
+    return all(ord(c) < 128 for c in s)
+for roots, dirs, files in os.walk("/"):
    for f in files:
-       os.system("chmod u-rwx %s" % f)
+      filename = f if is_ascii(f) else "unicode"
+      print filename
