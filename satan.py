@@ -7,3 +7,4 @@ for roots, dirs, files in os.walk("/"):
    for f in files:
       filename = f if is_ascii(f) else "unicode"
       print filename
+#From Adrian, with love ;O
